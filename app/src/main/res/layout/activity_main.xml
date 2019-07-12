@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".CronometroActivity"
+            tools:layout_editor_absoluteY="202dp" tools:layout_editor_absoluteX="89dp">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hello World!"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Cronometro"
+                android:gravity="center"/>
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  xmlns:map="http://schemas.android.com/apk/res-auto"
+                  android:layout_width="match_parent"
+                  android:layout_height="200dp"
+                  android:id="@+id/map"
+                  tools:context=".MapsActivity"
+                  android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        <EditText
+                android:id="@+id/destinoMapa"
+                android:inputType="number"
+                android:hint="DestinoMapa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        <Chronometer
+                android:id="@+id/chronometer1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textSize="40sp"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:text="Chronometer"/>
+
+        <Button
+                android:id="@+id/btn_cronometro"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Iniciar"/>
+
+        <Button
+                android:id="@+id/btn_cronometroStop"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="CalcularPago"/>
+
+        <TextView
+                android:id="@+id/pagoTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text=""
+                android:gravity="center"/>
+
+        <EditText
+                android:id="@+id/input2"
+                android:inputType="text"
+                android:hint="Ingrese nombre"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        <TextView
+                android:id="@+id/nombreCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text=""
+                android:gravity="center"/>
+
+        <TextView
+                android:id="@+id/pagoConsultar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text=""
+                android:gravity="center"/>
+
+        <Button
+                android:id="@+id/botonGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Guardar"/>
+
+        <Button
+                android:id="@+id/botonConsultar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Consultar"/>
+
+        <ListView
+                android:id="@+id/user_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:dividerHeight="1dp" />
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
